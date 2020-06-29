@@ -6,4 +6,25 @@
     android:layout_height="match_parent"
     tools:context=".CovidPage">
 
+    <TextView
+        android:id="@+id/covidTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/shape_background"
+        android:includeFontPadding="false"
+        android:text="@string/covidBtn"
+        android:textColor="@color/colorPrimary"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/syringeLogoiv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/syringelogo" />
 </androidx.constraintlayout.widget.ConstraintLayout>

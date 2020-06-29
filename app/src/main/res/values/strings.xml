@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">VaxTrax</string>
+    <string name="vaccineBtn">Vaccine</string>
+    <string name="covidBtn">Covid-19</string>
 </resources>
