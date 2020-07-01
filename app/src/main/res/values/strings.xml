@@ -2,4 +2,16 @@
     <string name="app_name">VaxTrax</string>
     <string name="vaccineBtn">Vaccine</string>
     <string name="covidBtn">Covid-19</string>
+    <string name="covidInfo">COVID-19 is a respiratory illness caused by a new virus.
+        Symptoms include fever, coughing, a sore throat and shortness of breath. The virus can spread
+        from person to person. Currently there is no treatment for COVID-19. It was first reported in
+        December 2019 in Wuhan City in China. The people most at risk are people 65 or older and people with
+        chronic conditions.</string>
+    <string name="selectCases">Select cases in your location</string>
+    <string name="millionCases">&gt; 1 million</string>
+    <string name="fiveHundredCases">&gt; 500,000</string>
+    <string name="twoFiftyCases">&gt; 250,000</string>
+    <string name="hundredCases">&gt; 100,000</string>
+    <string name="lessThanCases">&lt; 100,000 </string>
+    <string name="copyRight">Copyright &#169; 2020 Vax Trax</string>
 </resources>
