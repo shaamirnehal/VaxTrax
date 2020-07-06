@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">VaxTrax</string>
     <string name="vaccineBtn">Vaccine</string>
+    <string name="vaccines">Vaccines</string>
     <string name="covidBtn">Covid-19</string>
+    <string name="quizBtn">Take Covid Quiz</string>
     <string name="covidInfo">COVID-19 is a respiratory illness caused by a new virus.
         Symptoms include fever, coughing, a sore throat and shortness of breath. The virus can spread
         from person to person. Currently there is no treatment for COVID-19. It was first reported in

@@ -5,6 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/backgroundtwo"
+    android:backgroundTint="#50FFFFFF"
+    android:backgroundTintMode="src_over"
     tools:context=".CovidPage">
 
     <TextView
@@ -25,6 +27,7 @@
         android:id="@+id/syringeLogoiv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/syringelogo" />
@@ -39,7 +42,7 @@
         android:background="@drawable/tv_background_shape"
         android:gravity="center"
         android:text="@string/covidInfo"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/colorPrimary"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -143,5 +146,19 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/syringelogo" />
+
+    <Button
+        android:id="@+id/quizBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/quiz_btn_background"
+        android:text="@string/quizBtn"
+        android:textSize="9dp"
+        app:layout_constraintBottom_toTopOf="@+id/copyRight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lessThanCases"
+        app:layout_constraintVertical_bias="0.634" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
