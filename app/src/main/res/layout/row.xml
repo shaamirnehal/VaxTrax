@@ -20,7 +20,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp">
+        android:padding="8dp">
 
         <ImageView
             android:id="@+id/ivDisplay"
@@ -37,9 +37,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
-            android:layout_marginLeft="32dp"
             android:layout_marginTop="24dp"
+            android:contentDescription="@string/name"
             android:text="TextView"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
             android:textSize="20sp"
             app:layout_constraintStart_toEndOf="@+id/ivDisplay"
             app:layout_constraintTop_toTopOf="parent" />
@@ -48,18 +50,47 @@
             android:id="@+id/stagetv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
             android:layout_marginTop="10dp"
+            android:contentDescription="@string/stage"
             android:text="TextView"
-            app:layout_constraintStart_toStartOf="@+id/nametv"
+            app:layout_constraintStart_toEndOf="@+id/ivDisplay"
             app:layout_constraintTop_toBottomOf="@+id/nametv" />
 
         <TextView
             android:id="@+id/typetv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:contentDescription="@string/type"
             android:text="TextView"
-            app:layout_constraintStart_toEndOf="@+id/stagetv"
+            app:layout_constraintStart_toStartOf="@+id/stagetv"
+            app:layout_constraintTop_toBottomOf="@+id/stagetv" />
+
+        <TextView
+            android:id="@+id/stagettv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="2dp"
+            android:text="@string/stage"
+            android:textSize="10dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintBottom_toBottomOf="@+id/stagetv"
+            app:layout_constraintEnd_toStartOf="@+id/stagetv"
             app:layout_constraintTop_toTopOf="@+id/stagetv" />
+
+        <TextView
+            android:id="@+id/typettv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="2dp"
+            android:text="@string/type"
+            android:textSize="10dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintBottom_toBottomOf="@+id/typetv"
+            app:layout_constraintEnd_toStartOf="@+id/typetv"
+            app:layout_constraintTop_toTopOf="@+id/typetv" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
