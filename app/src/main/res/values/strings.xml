@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">VaxTrax</string>
     <string name="vaxTraxLogo">VaxTrax Logo</string>
+    <string name="syringeLogo">SyringeLogo</string>
     <string name="vaccineBtn">Vaccine</string>
     <string name="vaccines">Vaccines</string>
     <string name="covidBtn">Covid-19</string>

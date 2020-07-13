@@ -4,8 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
@@ -23,9 +21,7 @@ public class VaccinePage extends AppCompatActivity implements RVadapter.ItemClic
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vaccine_page);
         Drawable x = ContextCompat.getDrawable(getApplicationContext(), R.drawable.syringelogo);
-        String name = "sciences";
-        Vaccines vac1 = new Vaccines("Gilead Sciences",
-                "DNA","Pre-clinical",
+        Vaccines vac1 = new Vaccines("Gilead Sciences","DNA","Pre-clinical",
                 "Loremipsum asjdasndjasndjasnd",
                 x);
 
