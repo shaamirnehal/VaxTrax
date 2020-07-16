@@ -9,14 +9,12 @@ public class Vaccines {
     private String type;
     private String stage;
     private String info;
-    private Drawable display;
 
-    Vaccines    (String name, String type, String stage, String info, Drawable display) {
+    Vaccines    (String name, String type, String stage, String info) {
         this.name = name;
         this.type = type;
         this.stage = stage;
         this.info = info;
-        this.display = display;
     }
 
     public String getName() {
@@ -49,13 +47,5 @@ public class Vaccines {
 
     public void setInfo(String info) {
         this.info = info;
-    }
-
-    public Drawable getDisplay()  {
-        return display;
-    }
-
-    public void setDisplay(Drawable display)  {
-        this.display = display;
     }
 }

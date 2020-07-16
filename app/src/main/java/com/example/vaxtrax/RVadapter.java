@@ -40,11 +40,10 @@ public class RVadapter extends RecyclerView.Adapter<RVadapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull RVadapter.ViewHolder holder, int position) {
-        Vaccines dataObj =data.get(position);
+        Vaccines dataObj = data.get(position);
         holder.nametv.setText(dataObj.getName());
         holder.stagetv.setText(dataObj.getStage());
         holder.typetv.setText(dataObj.getType());
-        holder.ivDisplay.setBackground(dataObj.getDisplay()); // might need to test
     }
 
     @Override
@@ -66,7 +65,6 @@ public class RVadapter extends RecyclerView.Adapter<RVadapter.ViewHolder> {
             nametv = itemView.findViewById(R.id.nametv);
             stagetv = itemView.findViewById(R.id.stagetv);
             typetv = itemView.findViewById(R.id.typetv);
-            ivDisplay = itemView.findViewById(R.id.ivDisplay);
             itemView.setOnClickListener(this);
         }
 

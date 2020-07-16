@@ -22,8 +22,7 @@ public class VaccinePage extends AppCompatActivity implements RVadapter.ItemClic
         setContentView(R.layout.activity_vaccine_page);
         Drawable x = ContextCompat.getDrawable(getApplicationContext(), R.drawable.syringelogo);
         Vaccines vac1 = new Vaccines("Gilead Sciences","DNA","Pre-clinical",
-                "Loremipsum asjdasndjasndjasnd",
-                x);
+                "Loremipsum asjdasndjasndjasnd");
 
         data.add(vac1);
         rv = findViewById(R.id.rv);

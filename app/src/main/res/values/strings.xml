@@ -7,18 +7,20 @@
     <string name="covidBtn">Covid-19</string>
     <string name="stage">Stage:</string>
     <string name="type">Type:</string>
-    <string name="name">name</string>
+    <string name="name">Name:</string>
     <string name="quizBtn">Take Covid Quiz</string>
     <string name="covidInfo">COVID-19 is a respiratory illness caused by a new virus.
         Symptoms include fever, coughing, a sore throat and shortness of breath. The virus can spread
         from person to person. Currently there is no treatment for COVID-19. It was first reported in
         December 2019 in Wuhan City in China. The people most at risk are people 65 or older and people with
         chronic conditions.</string>
-    <string name="selectCases">Select cases in your location</string>
-    <string name="millionCases">&gt; 1 million</string>
-    <string name="fiveHundredCases">&gt; 500,000</string>
-    <string name="twoFiftyCases">&gt; 250,000</string>
-    <string name="hundredCases">&gt; 100,000</string>
-    <string name="lessThanCases">&lt; 100,000 </string>
     <string name="copyRight">Copyright &#169; 2020 Vax Trax</string>
+    <string name="global_stats">Global Stats</string>
+    <string name="new_confirmed">New Confirmed:</string>
+    <string name="total_confirmed">Total Confirmed:</string>
+    <string name="new_deaths">New Deaths:</string>
+    <string name="total_deaths">Total Deaths:</string>
+    <string name="total_recovered">Total Recovered:</string>
+    <string name="new_recovered">New Recovered:</string>
+    <string name="country">Country:</string>
 </resources>

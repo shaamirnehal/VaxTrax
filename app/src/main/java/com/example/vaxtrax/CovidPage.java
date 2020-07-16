@@ -14,7 +14,7 @@ public class CovidPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_covid_page);
-        statsBtn.findViewById(R.id.statsBtn);
+        statsBtn = findViewById(R.id.statsBtn);
 
         statsBtn.setOnClickListener(new View.OnClickListener() {
             @Override

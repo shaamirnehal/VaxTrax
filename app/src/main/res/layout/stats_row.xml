@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:layout_margin="2dp"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardBackgroundColor="#FFFFFF"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="2dp">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/country"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/new_confirmed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/new_confirmed"
+            app:layout_constraintStart_toStartOf="@+id/country"
+            app:layout_constraintTop_toBottomOf="@+id/country" />
+
+        <TextView
+            android:id="@+id/total_confirmed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:text="@string/total_confirmed"
+            app:layout_constraintBottom_toBottomOf="@+id/new_confirmed"
+            app:layout_constraintStart_toEndOf="@+id/new_confirmed"
+            app:layout_constraintTop_toTopOf="@+id/new_confirmed" />
+
+        <TextView
+            android:id="@+id/new_deaths"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/new_deaths"
+            app:layout_constraintStart_toStartOf="@+id/new_confirmed"
+            app:layout_constraintTop_toBottomOf="@+id/new_confirmed" />
+
+        <TextView
+            android:id="@+id/total_deaths"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/total_deaths"
+            app:layout_constraintBottom_toBottomOf="@+id/new_deaths"
+            app:layout_constraintStart_toStartOf="@+id/total_confirmed"
+            app:layout_constraintTop_toTopOf="@+id/new_deaths" />
+
+        <TextView
+            android:id="@+id/new_recovered"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/new_recovered"
+            app:layout_constraintStart_toStartOf="@+id/new_deaths"
+            app:layout_constraintTop_toBottomOf="@+id/new_deaths" />
+
+        <TextView
+            android:id="@+id/total_recovered"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/total_recovered"
+            app:layout_constraintBottom_toBottomOf="@+id/new_recovered"
+            app:layout_constraintStart_toStartOf="@+id/total_deaths"
+            app:layout_constraintTop_toTopOf="@+id/new_recovered" />
+
+        <TextView
+            android:id="@+id/nctv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/new_confirmed"
+            app:layout_constraintStart_toEndOf="@+id/new_confirmed"
+            app:layout_constraintTop_toTopOf="@+id/new_confirmed" />
+
+        <TextView
+            android:id="@+id/ndtv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/new_deaths"
+            app:layout_constraintStart_toEndOf="@+id/new_deaths"
+            app:layout_constraintTop_toTopOf="@+id/new_deaths" />
+
+        <TextView
+            android:id="@+id/nrtv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/new_recovered"
+            app:layout_constraintStart_toEndOf="@+id/new_recovered"
+            app:layout_constraintTop_toTopOf="@+id/new_recovered" />
+
+        <TextView
+            android:id="@+id/tctv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/total_confirmed"
+            app:layout_constraintStart_toEndOf="@+id/total_confirmed"
+            app:layout_constraintTop_toTopOf="@+id/total_confirmed" />
+
+        <TextView
+            android:id="@+id/tdtv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/total_deaths"
+            app:layout_constraintStart_toEndOf="@+id/total_deaths"
+            app:layout_constraintTop_toTopOf="@+id/total_deaths" />
+
+        <TextView
+            android:id="@+id/trtv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/total_recovered"
+            app:layout_constraintStart_toEndOf="@+id/total_recovered"
+            app:layout_constraintTop_toTopOf="@+id/total_recovered" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
