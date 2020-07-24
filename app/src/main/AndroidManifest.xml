@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".vaccinesDetail"></activity>
+        <activity android:name=".VaccinesDetail"></activity>
         <activity android:name=".StatsCovid" />
         <activity android:name=".CovidPage" />
         <activity android:name=".VaccinePage" />

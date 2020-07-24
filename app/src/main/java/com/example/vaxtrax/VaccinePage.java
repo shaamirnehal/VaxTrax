@@ -1,12 +1,10 @@
 package com.example.vaxtrax;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -79,7 +77,11 @@ public class VaccinePage extends AppCompatActivity implements RVadapter.ItemClic
 
     @Override
     public void onItemClick(View view, int position) {
-        Intent intent = new Intent(this, vaccinesDetail.class);
+        Intent intent = new Intent(this, VaccinesDetail.class);
+        intent.putExtra("name", vList.get(position).getName());
+        intent.putExtra("type", vList.get(position).getType());
+        intent.putExtra("stage", vList.get(position).getStage());
+        intent.putExtra("info", vList.get(position).getInfo());
         startActivity(intent);
     }
 }
