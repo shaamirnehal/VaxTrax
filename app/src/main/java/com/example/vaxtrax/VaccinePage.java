@@ -20,7 +20,6 @@ public class VaccinePage extends AppCompatActivity implements RVadapter.ItemClic
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vaccine_page);
-        Drawable x = ContextCompat.getDrawable(getApplicationContext(), R.drawable.syringelogo);
         Vaccines vac1 = new Vaccines("Gilead Sciences","DNA","Pre-clinical",
                 "Loremipsum asjdasndjasndjasnd");
 

@@ -39,45 +39,43 @@
             android:id="@+id/stagetv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
             android:contentDescription="@string/stage"
+            app:layout_constraintBottom_toBottomOf="@+id/stagettv"
             app:layout_constraintStart_toEndOf="@+id/stagettv"
-            app:layout_constraintTop_toBottomOf="@+id/nametv" />
+            app:layout_constraintTop_toTopOf="@+id/stagettv" />
 
         <TextView
             android:id="@+id/typetv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
             android:contentDescription="@string/type"
+            app:layout_constraintBottom_toBottomOf="@+id/typettv"
             app:layout_constraintStart_toEndOf="@+id/typettv"
-            app:layout_constraintTop_toBottomOf="@+id/stagetv" />
+            app:layout_constraintTop_toTopOf="@+id/typettv" />
 
         <TextView
             android:id="@+id/stagettv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
             android:text="@string/stage"
             android:textColor="@color/colorPrimary"
             android:textSize="10sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/stagetv"
             app:layout_constraintStart_toStartOf="@+id/nametv"
-            app:layout_constraintTop_toTopOf="@+id/stagetv"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintTop_toBottomOf="@+id/nametv" />
 
         <TextView
             android:id="@+id/typettv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:text="@string/type"
             android:textColor="@color/colorPrimary"
             android:textSize="10sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/typetv"
             app:layout_constraintStart_toStartOf="@+id/stagettv"
-            app:layout_constraintTop_toTopOf="@+id/typetv"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintTop_toBottomOf="@+id/stagettv" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

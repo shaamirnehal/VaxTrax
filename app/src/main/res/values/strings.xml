@@ -9,11 +9,25 @@
     <string name="type">Type:</string>
     <string name="name">Name:</string>
     <string name="quizBtn">Take Covid Quiz</string>
+    <string name="statsBtn">Latest Stats</string>
+    <string name="guidelines">Guidelines</string>
     <string name="covidInfo">COVID-19 is a respiratory illness caused by a new virus.
         Symptoms include fever, coughing, a sore throat and shortness of breath. The virus can spread
         from person to person. Currently there is no treatment for COVID-19. It was first reported in
         December 2019 in Wuhan City in China. The people most at risk are people 65 or older and people with
         chronic conditions.</string>
+    <string name="homeGuidelines">When at home:\n\n\u25E6 Cover your nose and mouth when sneezing and immediately
+        dispose of used tissues.
+        \n\u25E6 Regularly clean and disinfect frequently touched surfaces such as; table tops,
+        light switches, door handles, phones, keyboards and toilets.
+        \n\u25E6 Wash your hands regularly and avoid touching your eyes, nose and face with unwashed
+        hands.
+        \n When outside:
+        \n\n\u25E6 Wear a cloth mask that covers your nose and mouth when going outside.
+        \n\u25E6 Try to limit unnecessary errands and trips outside.
+        \n\u25E6 Avoid areas that may be crowded such as a public park or shopping centre.
+        \n\u25E6 Keep a 2.5m (6 feet) distance from other people when outside.
+        \n\u25E6 Use sanitiser after touching door handles or other frequently touched objects.</string>
     <string name="copyRight">Copyright &#169; 2020 Vax Trax</string>
     <string name="global_stats">Global Stats</string>
     <string name="new_confirmed">New Confirmed:</string>
