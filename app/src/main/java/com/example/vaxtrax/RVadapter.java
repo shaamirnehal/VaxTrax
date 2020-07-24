@@ -1,10 +1,10 @@
 package com.example.vaxtrax;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -41,6 +41,7 @@ public class RVadapter extends RecyclerView.Adapter<RVadapter.ViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull RVadapter.ViewHolder holder, int position) {
         Vaccines dataObj = data.get(position);
+        Log.i("onBindViewHolder", "onBindViewHolder: " + dataObj.getInfo());
         holder.nametv.setText(dataObj.getName());
         holder.stagetv.setText(dataObj.getStage());
         holder.typetv.setText(dataObj.getType());
@@ -56,9 +57,6 @@ public class RVadapter extends RecyclerView.Adapter<RVadapter.ViewHolder> {
         TextView nametv;
         TextView stagetv;
         TextView typetv;
-        ImageView ivDisplay;
-
-        //for handling views
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
