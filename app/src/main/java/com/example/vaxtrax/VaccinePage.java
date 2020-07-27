@@ -28,7 +28,7 @@ public class VaccinePage extends AppCompatActivity implements RVadapter.ItemClic
     RVadapter adapter;
     ArrayList<Vaccines> data = new ArrayList<>();
     RequestQueue reqQ;
-    String baseUrl = "http://10.0.2.2:8080";
+    String baseUrl = "http://10.0.2.2:8080"; //android emulator maps local host ip to 10.0.2.2
     String listVac = "/vaccine";
     ArrayList<Vaccines> vList;
 
