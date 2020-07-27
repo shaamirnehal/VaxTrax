@@ -12,85 +12,88 @@
     app:cardCornerRadius="5dp"
     app:cardElevation="2dp">
 
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="8dp">
 
         <TextView
-            android:textColor="@color/colorPrimary"
+            android:textColor="#000000"
             android:id="@+id/country"
+            android:text="COUNTRY: "
+            android:textStyle="bold"
+            android:textAllCaps="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:textColor="@color/colorPrimary"
+            android:textColor="#000000"
             android:id="@+id/new_confirmed"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:text="@string/new_confirmed"
+            android:layout_marginTop="7dp"
+            android:text="New Confirmed: "
             app:layout_constraintStart_toStartOf="@+id/country"
             app:layout_constraintTop_toBottomOf="@+id/country" />
 
         <TextView
-            android:textColor="@color/colorPrimary"
+            android:textColor="#000000"
             android:id="@+id/total_confirmed"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="100dp"
-            android:text="@string/total_confirmed"
+            android:text="Total Confirmed: "
             app:layout_constraintBottom_toBottomOf="@+id/new_confirmed"
             app:layout_constraintStart_toEndOf="@+id/new_confirmed"
             app:layout_constraintTop_toTopOf="@+id/new_confirmed" />
 
         <TextView
-            android:textColor="@color/colorPrimary"
+            android:textColor="#000000"
             android:id="@+id/new_deaths"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="@string/new_deaths"
+            android:layout_marginTop="7dp"
+            android:text="New Deaths: "
             app:layout_constraintStart_toStartOf="@+id/new_confirmed"
             app:layout_constraintTop_toBottomOf="@+id/new_confirmed" />
 
         <TextView
-            android:textColor="@color/colorPrimary"
+            android:textColor="#000000"
             android:id="@+id/total_deaths"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/total_deaths"
+            android:text="Total Deaths: "
             app:layout_constraintBottom_toBottomOf="@+id/new_deaths"
             app:layout_constraintStart_toStartOf="@+id/total_confirmed"
             app:layout_constraintTop_toTopOf="@+id/new_deaths" />
 
         <TextView
-            android:textColor="@color/colorPrimary"
+            android:textColor="#000000"
             android:id="@+id/new_recovered"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="@string/new_recovered"
+            android:layout_marginTop="7dp"
+            android:text="New Recovered: "
             app:layout_constraintStart_toStartOf="@+id/new_deaths"
             app:layout_constraintTop_toBottomOf="@+id/new_deaths" />
 
         <TextView
-            android:textColor="@color/colorPrimary"
+            android:textColor="#000000"
             android:id="@+id/total_recovered"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/total_recovered"
+            android:text="Total Recovered: "
             app:layout_constraintBottom_toBottomOf="@+id/new_recovered"
             app:layout_constraintStart_toStartOf="@+id/total_deaths"
             app:layout_constraintTop_toTopOf="@+id/new_recovered" />
 
         <TextView
-            android:textColor="@color/colorPrimary"
             android:id="@+id/nctv"
+            android:textColor="#000000"
+            android:textStyle="bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="@+id/new_confirmed"
@@ -98,8 +101,9 @@
             app:layout_constraintTop_toTopOf="@+id/new_confirmed" />
 
         <TextView
-            android:textColor="@color/colorPrimary"
             android:id="@+id/ndtv"
+            android:textColor="#000000"
+            android:textStyle="bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="@+id/new_deaths"
@@ -107,8 +111,9 @@
             app:layout_constraintTop_toTopOf="@+id/new_deaths" />
 
         <TextView
-            android:textColor="@color/colorPrimary"
             android:id="@+id/nrtv"
+            android:textColor="#000000"
+            android:textStyle="bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="@+id/new_recovered"
@@ -116,8 +121,9 @@
             app:layout_constraintTop_toTopOf="@+id/new_recovered" />
 
         <TextView
-            android:textColor="@color/colorPrimary"
             android:id="@+id/tctv"
+            android:textColor="#000000"
+            android:textStyle="bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="@+id/total_confirmed"
@@ -125,8 +131,9 @@
             app:layout_constraintTop_toTopOf="@+id/total_confirmed" />
 
         <TextView
-            android:textColor="@color/colorPrimary"
             android:id="@+id/tdtv"
+            android:textColor="#000000"
+            android:textStyle="bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="@+id/total_deaths"
@@ -134,8 +141,9 @@
             app:layout_constraintTop_toTopOf="@+id/total_deaths" />
 
         <TextView
-            android:textColor="@color/colorPrimary"
             android:id="@+id/trtv"
+            android:textColor="#000000"
+            android:textStyle="bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="@+id/total_recovered"

@@ -7,8 +7,9 @@
     tools:context=".VaccinesDetail">
 
     <TextView
-        android:textColor="@color/colorPrimary"
+        android:textColor="#000000"
         android:id="@+id/tv_name"
+        android:text="Name: "
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -17,40 +18,40 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:textColor="@color/colorPrimary"
+        android:textColor="#000000"
         android:id="@+id/type_display"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
         android:layout_marginTop="25dp"
-        android:text="@string/type"
+        android:text="Type: "
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_name" />
 
     <TextView
-        android:textColor="@color/colorPrimary"
+        android:textColor="#000000"
         android:id="@+id/stage_display"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
         android:layout_marginEnd="5dp"
-        android:text="@string/stage"
+        android:text="Stage: "
         app:layout_constraintEnd_toStartOf="@+id/tv_stage"
         app:layout_constraintTop_toBottomOf="@+id/tv_name" />
 
     <TextView
-        android:textColor="@color/colorPrimary"
+        android:textColor="#000000"
         android:id="@+id/info_display"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
-        android:text="@string/description"
+        android:text="Description: "
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/type_display" />
 
     <TextView
-        android:textColor="@color/colorPrimary"
+        android:textColor="#000000"
         android:id="@+id/tv_type"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -60,7 +61,7 @@
         app:layout_constraintTop_toTopOf="@+id/type_display" />
 
     <TextView
-        android:textColor="@color/colorPrimary"
+        android:textColor="#000000"
         android:id="@+id/tv_stage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -70,7 +71,7 @@
         app:layout_constraintTop_toTopOf="@+id/stage_display" />
 
     <TextView
-        android:textColor="@color/colorPrimary"
+        android:textColor="#000000"
         android:id="@+id/tv_info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
