@@ -16,18 +16,18 @@
         from person to person. Currently there is no treatment for COVID-19. It was first reported in
         December 2019 in Wuhan City in China. The people most at risk are people 65 or older and people with
         chronic conditions.</string>
-    <string name="homeGuidelines">When at home:\n\n\u25E6 Cover your nose and mouth when sneezing and immediately
+    <string name="homeGuidelines">When at home:\n\n\u25E6 Cover your nose and mouth when sneezing and &#160;&#160;immediately
         dispose of used tissues.
-        \n\u25E6 Regularly clean and disinfect frequently touched surfaces such as; table tops,
-        light switches, door handles, phones, keyboards and toilets.
-        \n\u25E6 Wash your hands regularly and avoid touching your eyes, nose and face with unwashed
+        \n\u25E6 Regularly clean and disinfect frequently touched &#160;&#160;surfaces such as; table tops,
+        light switches, door &#160;&#160;handles, phones, keyboards and toilets.
+        \n\u25E6 Wash your hands regularly and avoid touching your &#160;&#160;&#160;eyes, nose and face with unwashed
         hands.
-        \n When outside:
-        \n\n\u25E6 Wear a cloth mask that covers your nose and mouth when going outside.
+        \n\n When outside:
+        \n\n\u25E6 Wear a cloth mask that covers your nose and mouth &#160;&#160;&#160;when going outside.
         \n\u25E6 Try to limit unnecessary errands and trips outside.
-        \n\u25E6 Avoid areas that may be crowded such as a public park or shopping centre.
-        \n\u25E6 Keep a 2.5m (6 feet) distance from other people when outside.
-        \n\u25E6 Use sanitiser after touching door handles or other frequently touched objects.</string>
+        \n\u25E6 Avoid areas that may be crowded such as a public park &#160;&#160;or shopping centre.
+        \n\u25E6 Keep a 2.5m (6 feet) distance from other people when &#160;&#160;outside.
+        \n\u25E6 Use sanitiser after touching door handles or other &#160;&#160;&#160;frequently touched objects.</string>
     <string name="copyRight">Copyright &#169; 2020 Vax Trax</string>
     <string name="global_stats">Global Stats</string>
     <string name="new_confirmed">New Confirmed:</string>
@@ -38,4 +38,5 @@
     <string name="new_recovered">New Recovered:</string>
     <string name="country">Country:</string>
     <string name="description">Description</string>
+    <string name="view_covid_19_statistics">View COVID-19 Statistics</string>
 </resources>
