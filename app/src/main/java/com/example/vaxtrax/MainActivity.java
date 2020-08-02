@@ -11,6 +11,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button covidBtn;
     Button vaccineBtn;
+    Button statsbtn_main;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
         covidBtn = findViewById(R.id.covidBtn);
         vaccineBtn = findViewById(R.id.vaccineBtn);
+        statsbtn_main = findViewById(R.id.statsbtn_main);
 
         covidBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,6 +35,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, VaccinePage.class);
+                startActivity(intent);
+            }
+        });
+
+        statsbtn_main.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, StatsCovid.class);
                 startActivity(intent);
             }
         });

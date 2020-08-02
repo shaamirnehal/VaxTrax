@@ -78,7 +78,8 @@
                         android:id="@+id/vaccineBtn"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@android:color/transparent"
+                        android:background="@drawable/button_background_shape"
+                        android:elevation="20dp"
                         android:layout_marginTop="12dp"
                         android:textColor="#000000"
                         android:textSize="18dp"
@@ -113,7 +114,8 @@
                         android:id="@+id/covidBtn"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@android:color/transparent"
+                        android:background="@drawable/button_background_shape"
+                        android:elevation="20dp"
                         android:layout_marginTop="12dp"
                         android:textColor="#000000"
                         android:textSize="18dp"
@@ -193,6 +195,15 @@
 
 
         </GridLayout>
+
+        <Button
+            android:id="@+id/statsbtn_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/custom_btn_2"
+            android:textColor="#FFFFFF"
+            android:text="@string/view_covid_19_statistics" />
 
     </LinearLayout>
 
