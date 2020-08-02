@@ -42,7 +42,7 @@
                 android:layout_width="61dp"
                 android:layout_height="61dp"
                 android:layout_alignParentRight="true"
-                android:src="@drawable/syringelogo" />
+                android:src="@drawable/vaxtrax" />
 
             <TextView
                 android:layout_width="wrap_content"
