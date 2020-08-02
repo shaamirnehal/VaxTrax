@@ -39,4 +39,6 @@
     <string name="country">Country:</string>
     <string name="description">Description</string>
     <string name="view_covid_19_statistics">View COVID-19 Statistics</string>
+    <string name="vaccine_development">Vaccine Development</string>
+    <string name="information_on_the_covid_19_pandemic">Information on the COVID-19 Pandemic</string>
 </resources>
