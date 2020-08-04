@@ -41,4 +41,17 @@
     <string name="view_covid_19_statistics">View COVID-19 Statistics</string>
     <string name="vaccine_development">Vaccine Development</string>
     <string name="information_on_the_covid_19_pandemic">Information on the COVID-19 Pandemic</string>
+    <string name="stages_of_vaccine_development">Stages of Vaccine Development</string>
+    <string name="preclinical">Preclinical:</string>
+    <string name="phase_1">Phase 1:</string>
+    <string name="phase_2">Phase 2:</string>
+    <string name="emergency_use_authorization">Emergency Use Authorization</string>
+    <string name="preclinicaltv">This stage is used to refer to innovations that are currently not being tested in clincal trials. Clinical trials refer to working the the treatment with chemicals to understand reactions or conducting studies on human and non-human test subjects.</string>
+    <string name="phaseOne">This stage refers to finding the most suitable dosage of the treatment through clincal trials of human subject in small groups between 20-80 people.</string>
+    <string name="phaseTwo">Phase 2 is when trials are expanded and studies are done to understand their safety and efficacy in the human body with larger groups of people.</string>
+    <string name="phaseThree">Phase 3 asseses the side-effects of the drugs and compares them to standard drugs currently in the market. This phase is used to guage the effectiveness and understand if they are causing any detrimental side-effects. </string>
+    <string name="phaseFour">At this phase, the treatment is approved and licensed by the FDA, however there are ongoing studies being conducted.</string>
+    <string name="emergencyUse">This stage means that the drug has been given approval to be made available to the public without having been through all phases of testing.</string>
+    <string name="phase_3">Phase 3:</string>
+    <string name="phase_4">Phase 4:</string>
 </resources>
