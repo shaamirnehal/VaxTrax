@@ -46,24 +46,32 @@
                 android:id="@+id/rdgb1a"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/colorPrimary"
+                android:onClick="onRadioButtonClicked"
                 android:text="@string/united_states" />
 
             <RadioButton
                 android:id="@+id/rdgb1b"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/colorPrimary"
+                android:onClick="onRadioButtonClicked"
                 android:text="@string/china" />
 
             <RadioButton
                 android:id="@+id/rdgb1c"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/colorPrimary"
+                android:onClick="onRadioButtonClicked"
                 android:text="@string/brazil" />
 
             <RadioButton
                 android:id="@+id/rdgb1d"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/colorPrimary"
+                android:onClick="onRadioButtonClicked"
                 android:text="@string/russia" />
         </RadioGroup>
 
@@ -90,24 +98,32 @@
                 android:id="@+id/rdgb2a"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/colorPrimary"
+                android:onClick="onRadioButtonClicked"
                 android:text="@string/loss_of_smell_and_taste" />
 
             <RadioButton
                 android:id="@+id/rdgb2b"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/colorPrimary"
+                android:onClick="onRadioButtonClicked"
                 android:text="@string/fever" />
 
             <RadioButton
                 android:id="@+id/rdgb2c"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/colorPrimary"
+                android:onClick="onRadioButtonClicked"
                 android:text="@string/dry_cough" />
 
             <RadioButton
                 android:id="@+id/rdgb2d"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/colorPrimary"
+                android:onClick="onRadioButtonClicked"
                 android:text="@string/depression" />
         </RadioGroup>
 
@@ -134,24 +150,32 @@
                 android:id="@+id/rdgb3a"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/colorPrimary"
+                android:onClick="onRadioButtonClicked"
                 android:text="@string/visit_a_medical_professional" />
 
             <RadioButton
                 android:id="@+id/rdgb3b"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/colorPrimary"
+                android:onClick="onRadioButtonClicked"
                 android:text="@string/self_isolate_for_14_days" />
 
             <RadioButton
                 android:id="@+id/rdgb3c"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/colorPrimary"
+                android:onClick="onRadioButtonClicked"
                 android:text="@string/self_isolate_for_7_days" />
 
             <RadioButton
                 android:id="@+id/rdgb3d"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/colorPrimary"
+                android:onClick="onRadioButtonClicked"
                 android:text="@string/drink_hot_water" />
         </RadioGroup>
 
@@ -178,24 +202,32 @@
                 android:id="@+id/rdgb4a"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/colorPrimary"
+                android:onClick="onRadioButtonClicked"
                 android:text="@string/private_sector" />
 
             <RadioButton
                 android:id="@+id/rdgb4b"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/colorPrimary"
+                android:onClick="onRadioButtonClicked"
                 android:text="@string/public_sector" />
 
             <RadioButton
                 android:id="@+id/rdgb4c"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/colorPrimary"
+                android:onClick="onRadioButtonClicked"
                 android:text="@string/both" />
 
             <RadioButton
                 android:id="@+id/rdgb4d"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/colorPrimary"
+                android:onClick="onRadioButtonClicked"
                 android:text="@string/none" />
         </RadioGroup>
 
@@ -222,12 +254,16 @@
                 android:id="@+id/rdgb5a"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/colorPrimary"
+                android:onClick="onRadioButtonClicked"
                 android:text="@string/yes" />
 
             <RadioButton
                 android:id="@+id/rdgb5b"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/colorPrimary"
+                android:onClick="onRadioButtonClicked"
                 android:text="@string/no" />
         </RadioGroup>
 
@@ -254,12 +290,16 @@
                 android:id="@+id/rdgb6a"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/colorPrimary"
+                android:onClick="onRadioButtonClicked"
                 android:text="@string/yes" />
 
             <RadioButton
                 android:id="@+id/rdgb6b"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/colorPrimary"
+                android:onClick="onRadioButtonClicked"
                 android:text="@string/no" />
         </RadioGroup>
 
@@ -286,12 +326,16 @@
                 android:id="@+id/rdgb7a"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/colorPrimary"
+                android:onClick="onRadioButtonClicked"
                 android:text="@string/yes" />
 
             <RadioButton
                 android:id="@+id/rdgb7b"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/colorPrimary"
+                android:onClick="onRadioButtonClicked"
                 android:text="@string/no" />
         </RadioGroup>
 
@@ -318,15 +362,27 @@
                 android:id="@+id/rdgb8a"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/colorPrimary"
+                android:onClick="onRadioButtonClicked"
                 android:text="@string/prevention_methods" />
 
             <RadioButton
                 android:id="@+id/rdgb8b"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/colorPrimary"
+                android:onClick="onRadioButtonClicked"
                 android:text="@string/current_trends_in_your_country_and_around_the_world" />
 
         </RadioGroup>
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            android:text="@string/submit_quiz" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 </ScrollView>

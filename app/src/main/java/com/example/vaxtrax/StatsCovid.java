@@ -13,6 +13,7 @@ import com.android.volley.toolbox.Volley;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.SearchView;
 import android.widget.TextView;
 
 import org.json.JSONArray;
@@ -29,6 +30,7 @@ public class StatsCovid extends AppCompatActivity {
     TextView tvTD;
     TextView tvNR;
     TextView tvTR;
+    SearchView sv_stats;
     RecyclerView rv;
     CountriesAdapter adapter;
 
@@ -46,8 +48,23 @@ public class StatsCovid extends AppCompatActivity {
         tvTD = findViewById(R.id.tv_td);
         tvNR = findViewById(R.id.tv_nr);
         tvTR = findViewById(R.id.tv_tr);
+        sv_stats = findViewById(R.id.sv_stats);
         rv = findViewById(R.id.rv);
         rv.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
+
+        sv_stats.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                adapter.getFilter().filter(query);
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                adapter.getFilter().filter(newText);
+                return false;
+            }
+        });
 
 
         reqQ = Volley.newRequestQueue(this);
