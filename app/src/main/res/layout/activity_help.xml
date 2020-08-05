@@ -73,8 +73,8 @@
 
     <TextView
         android:id="@+id/tv_preclinical"
-        android:layout_width="404dp"
-        android:layout_height="84dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:text="@string/preclinicaltv"
         app:layout_constraintStart_toEndOf="@+id/tv_p"
@@ -106,8 +106,8 @@
 
     <TextView
         android:id="@+id/tv_phaseFour"
-        android:layout_width="400dp"
-        android:layout_height="58dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="@string/phaseFour"
         app:layout_constraintStart_toStartOf="@+id/tv_phaseThree"
         app:layout_constraintTop_toTopOf="@+id/textView6" />

@@ -11,6 +11,7 @@
         android:paddingBottom="20dp"
         android:paddingTop="20dp"
         android:paddingLeft="20dp"
+        android:paddingRight="20dp"
         android:orientation="vertical">
 
         <TextView
@@ -24,8 +25,8 @@
 
         <TextView
             android:id="@+id/textView2"
-            android:layout_width="412dp"
-            android:layout_height="53dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="35dp"
             android:text="@string/q1_what_country_has_the_most_number_of_active_covid_19_cases_currently_in_the_world"
             app:layout_constraintEnd_toEndOf="parent"
@@ -42,28 +43,28 @@
             app:layout_constraintTop_toBottomOf="@+id/textView2">
 
             <RadioButton
-                android:id="@+id/radioButton"
+                android:id="@+id/rdgb1a"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="RadioButton" />
+                android:text="United States" />
 
             <RadioButton
-                android:id="@+id/radioButton2"
+                android:id="@+id/rdgb1b"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="RadioButton" />
+                android:text="China" />
 
             <RadioButton
-                android:id="@+id/radioButton3"
+                android:id="@+id/rdgb1c"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="RadioButton" />
+                android:text="Brazil" />
 
             <RadioButton
-                android:id="@+id/radioButton4"
+                android:id="@+id/rdgb1d"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="RadioButton" />
+                android:text="Russia" />
         </RadioGroup>
 
         <TextView
@@ -86,28 +87,28 @@
             app:layout_constraintTop_toBottomOf="@+id/textView8">
 
             <RadioButton
-                android:id="@+id/radioButton5"
+                android:id="@+id/rdgb2a"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="RadioButton" />
+                android:text="Loss of smell and taste" />
 
             <RadioButton
-                android:id="@+id/radioButton6"
+                android:id="@+id/rdgb2b"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="RadioButton" />
+                android:text="Fever" />
 
             <RadioButton
-                android:id="@+id/radioButton7"
+                android:id="@+id/rdgb2c"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="RadioButton" />
+                android:text="Dry Cough" />
 
             <RadioButton
-                android:id="@+id/radioButton8"
+                android:id="@+id/rdgb2d"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="RadioButton" />
+                android:text="Depression" />
         </RadioGroup>
 
         <TextView
@@ -130,28 +131,28 @@
             app:layout_constraintTop_toBottomOf="@id/textView9">
 
             <RadioButton
-                android:id="@+id/radioButton9"
+                android:id="@+id/rdgb3a"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="RadioButton" />
+                android:text="Visit a medical professional" />
 
             <RadioButton
-                android:id="@+id/radioButton10"
+                android:id="@+id/rdgb3b"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="RadioButton" />
+                android:text="Self isolate for 14 days" />
 
             <RadioButton
-                android:id="@+id/radioButton11"
+                android:id="@+id/rdgb3c"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="RadioButton" />
+                android:text="Self isolate for 7 days" />
 
             <RadioButton
-                android:id="@+id/radioButton12"
+                android:id="@+id/rdgb3d"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="RadioButton" />
+                android:text="Drink hot water" />
         </RadioGroup>
 
         <TextView
@@ -165,7 +166,7 @@
             app:layout_constraintTop_toBottomOf="@+id/rdg3" />
 
         <RadioGroup
-            android:id="@+id/radioGroup3"
+            android:id="@+id/rdg4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
@@ -174,28 +175,28 @@
             app:layout_constraintTop_toBottomOf="@+id/textView10">
 
             <RadioButton
-                android:id="@+id/radioButton13"
+                android:id="@+id/rdgb4a"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="RadioButton" />
+                android:text="Private sector" />
 
             <RadioButton
-                android:id="@+id/radioButton14"
+                android:id="@+id/rdgb4b"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="RadioButton" />
+                android:text="Public Sector" />
 
             <RadioButton
-                android:id="@+id/radioButton16"
+                android:id="@+id/rdgb4c"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="RadioButton" />
+                android:text="Both" />
 
             <RadioButton
-                android:id="@+id/radioButton15"
+                android:id="@+id/rdgb4d"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="RadioButton" />
+                android:text="None" />
         </RadioGroup>
 
         <TextView
@@ -206,10 +207,10 @@
             android:text="@string/q5_are_you_interested_to_learn_more_about_this_pandemic_that_is_taking_the_world_by_storm"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/radioGroup3" />
+            app:layout_constraintTop_toBottomOf="@+id/rdg4" />
 
         <RadioGroup
-            android:id="@+id/radioGroup4"
+            android:id="@+id/rdg5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
@@ -218,16 +219,16 @@
             app:layout_constraintTop_toBottomOf="@+id/textView11">
 
             <RadioButton
-                android:id="@+id/radioButton17"
+                android:id="@+id/rdgb5a"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="RadioButton" />
+                android:text="Yes" />
 
             <RadioButton
-                android:id="@+id/radioButton18"
+                android:id="@+id/rdgb5b"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="RadioButton" />
+                android:text="No" />
         </RadioGroup>
 
         <TextView
@@ -238,10 +239,10 @@
             android:text="@string/q6_would_you_like_to_know_about_the_vaccine_development_lifecycle"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/radioGroup4" />
+            app:layout_constraintTop_toBottomOf="@+id/rdg5" />
 
         <RadioGroup
-            android:id="@+id/radioGroup5"
+            android:id="@+id/rdg6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
@@ -250,16 +251,16 @@
             app:layout_constraintTop_toBottomOf="@+id/textView12">
 
             <RadioButton
-                android:id="@+id/radioButton19"
+                android:id="@+id/rdgb6a"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="RadioButton" />
+                android:text="Yes" />
 
             <RadioButton
-                android:id="@+id/radioButton20"
+                android:id="@+id/rdgb6b"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="RadioButton" />
+                android:text="No" />
         </RadioGroup>
 
         <TextView
@@ -270,10 +271,10 @@
             android:text="@string/q7_do_you_feel_overwhelmed_by_the_current_volume_of_data_being_presented_to_you_in_the_media_about_coronavirus"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/radioGroup5" />
+            app:layout_constraintTop_toBottomOf="@+id/rdg6" />
 
         <RadioGroup
-            android:id="@+id/radioGroup6"
+            android:id="@+id/rdg7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
@@ -282,16 +283,16 @@
             app:layout_constraintTop_toBottomOf="@+id/textView13">
 
             <RadioButton
-                android:id="@+id/radioButton21"
+                android:id="@+id/rdgb7a"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="RadioButton" />
+                android:text="Yes" />
 
             <RadioButton
-                android:id="@+id/radioButton22"
+                android:id="@+id/rdgb7b"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="RadioButton" />
+                android:text="No" />
         </RadioGroup>
 
         <TextView
@@ -302,9 +303,10 @@
             android:text="@string/q8_which_area_of_covid_19_are_you_more_unfamiliar_with"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/radioGroup6" />
+            app:layout_constraintTop_toBottomOf="@+id/rdg7" />
 
         <RadioGroup
+            android:id="@+id/rdg8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
@@ -313,16 +315,16 @@
             app:layout_constraintTop_toBottomOf="@+id/textView14">
 
             <RadioButton
-                android:id="@+id/radioButton23"
+                android:id="@+id/rdgb8a"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="RadioButton" />
+                android:text="Prevention methods" />
 
             <RadioButton
-                android:id="@+id/radioButton24"
+                android:id="@+id/rdgb8b"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="RadioButton" />
+                android:text="Current trends in your country and around the world" />
 
         </RadioGroup>
 
