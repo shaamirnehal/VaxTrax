@@ -54,4 +54,17 @@
     <string name="emergencyUse">This stage means that the drug has been given approval to be made available to the public without having been through all phases of testing.</string>
     <string name="phase_3">Phase 3:</string>
     <string name="phase_4">Phase 4:</string>
+    <string name="q8_which_area_of_covid_19_are_you_more_unfamiliar_with">Q8: Which area of Covid-19 are you more unfamiliar with?</string>
+    <string name="q7_do_you_feel_overwhelmed_by_the_current_volume_of_data_being_presented_to_you_in_the_media_about_coronavirus">Q7: Do you feel overwhelmed by the current volume of data being presented to you in the media about coronavirus?</string>
+    <string name="q6_would_you_like_to_know_about_the_vaccine_development_lifecycle">Q6: Would you like to know about the vaccine development lifecycle?</string>
+    <string name="q5_are_you_interested_to_learn_more_about_this_pandemic_that_is_taking_the_world_by_storm">Q5: Are you interested to learn more about this pandemic that is taking the world by storm?</string>
+    <string name="q4_would_you_rather_know_about_vaccine_developments_in_private_sectors_public_sectors_or_both">Q4: Would you rather know about vaccine developments in private sectors, public sectors or both?</string>
+    <string name="q3_what_are_the_appropriate_steps_i_should_take_if_i_develop_covid_19_like_symptoms">Q3: What are the appropriate steps I should take if I develop COVID-19 like symptoms?</string>
+    <string name="q2_what_is_the_most_common_symptom_of_covid_19">Q2: What is the most common symptom of COVID-19?</string>
+    <string name="q1_what_country_has_the_most_number_of_active_covid_19_cases_currently_in_the_world">Q1: What country has the most number of active COVID-19 cases currently in the world?</string>
+    <string name="vax_trax">Vax Trax</string>
+    <string name="vaccine">Vaccine</string>
+    <string name="virus">Virus</string>
+    <string name="statistics">Statistics</string>
+    <string name="quiz">Quiz</string>
 </resources>
