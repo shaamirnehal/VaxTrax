@@ -67,4 +67,24 @@
     <string name="virus">Virus</string>
     <string name="statistics">Statistics</string>
     <string name="quiz">Quiz</string>
+    <string name="current_trends_in_your_country_and_around_the_world">Current trends in your country and around the world</string>
+    <string name="prevention_methods">Prevention methods</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="none">None</string>
+    <string name="both">Both</string>
+    <string name="private_sector">Private sector</string>
+    <string name="public_sector">Public Sector</string>
+    <string name="drink_hot_water">Drink hot water</string>
+    <string name="self_isolate_for_7_days">Self isolate for 7 days</string>
+    <string name="self_isolate_for_14_days">Self isolate for 14 days</string>
+    <string name="visit_a_medical_professional">Visit a medical professional</string>
+    <string name="depression">Depression</string>
+    <string name="dry_cough">Dry Cough</string>
+    <string name="fever">Fever</string>
+    <string name="loss_of_smell_and_taste">Loss of smell and taste</string>
+    <string name="russia">Russia</string>
+    <string name="brazil">Brazil</string>
+    <string name="china">China</string>
+    <string name="united_states">United States</string>
 </resources>

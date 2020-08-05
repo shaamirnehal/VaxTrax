@@ -7,18 +7,18 @@
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:paddingBottom="20dp"
-        android:paddingTop="20dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
         android:paddingLeft="20dp"
+        android:paddingTop="20dp"
         android:paddingRight="20dp"
-        android:orientation="vertical">
+        android:paddingBottom="20dp">
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Quiz"
+            android:text="@string/quiz"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -46,25 +46,25 @@
                 android:id="@+id/rdgb1a"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="United States" />
+                android:text="@string/united_states" />
 
             <RadioButton
                 android:id="@+id/rdgb1b"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="China" />
+                android:text="@string/china" />
 
             <RadioButton
                 android:id="@+id/rdgb1c"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Brazil" />
+                android:text="@string/brazil" />
 
             <RadioButton
                 android:id="@+id/rdgb1d"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Russia" />
+                android:text="@string/russia" />
         </RadioGroup>
 
         <TextView
@@ -90,25 +90,25 @@
                 android:id="@+id/rdgb2a"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Loss of smell and taste" />
+                android:text="@string/loss_of_smell_and_taste" />
 
             <RadioButton
                 android:id="@+id/rdgb2b"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Fever" />
+                android:text="@string/fever" />
 
             <RadioButton
                 android:id="@+id/rdgb2c"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Dry Cough" />
+                android:text="@string/dry_cough" />
 
             <RadioButton
                 android:id="@+id/rdgb2d"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Depression" />
+                android:text="@string/depression" />
         </RadioGroup>
 
         <TextView
@@ -134,25 +134,25 @@
                 android:id="@+id/rdgb3a"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Visit a medical professional" />
+                android:text="@string/visit_a_medical_professional" />
 
             <RadioButton
                 android:id="@+id/rdgb3b"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Self isolate for 14 days" />
+                android:text="@string/self_isolate_for_14_days" />
 
             <RadioButton
                 android:id="@+id/rdgb3c"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Self isolate for 7 days" />
+                android:text="@string/self_isolate_for_7_days" />
 
             <RadioButton
                 android:id="@+id/rdgb3d"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Drink hot water" />
+                android:text="@string/drink_hot_water" />
         </RadioGroup>
 
         <TextView
@@ -178,25 +178,25 @@
                 android:id="@+id/rdgb4a"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Private sector" />
+                android:text="@string/private_sector" />
 
             <RadioButton
                 android:id="@+id/rdgb4b"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Public Sector" />
+                android:text="@string/public_sector" />
 
             <RadioButton
                 android:id="@+id/rdgb4c"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Both" />
+                android:text="@string/both" />
 
             <RadioButton
                 android:id="@+id/rdgb4d"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="None" />
+                android:text="@string/none" />
         </RadioGroup>
 
         <TextView
@@ -222,13 +222,13 @@
                 android:id="@+id/rdgb5a"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Yes" />
+                android:text="@string/yes" />
 
             <RadioButton
                 android:id="@+id/rdgb5b"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="No" />
+                android:text="@string/no" />
         </RadioGroup>
 
         <TextView
@@ -254,13 +254,13 @@
                 android:id="@+id/rdgb6a"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Yes" />
+                android:text="@string/yes" />
 
             <RadioButton
                 android:id="@+id/rdgb6b"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="No" />
+                android:text="@string/no" />
         </RadioGroup>
 
         <TextView
@@ -286,13 +286,13 @@
                 android:id="@+id/rdgb7a"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Yes" />
+                android:text="@string/yes" />
 
             <RadioButton
                 android:id="@+id/rdgb7b"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="No" />
+                android:text="@string/no" />
         </RadioGroup>
 
         <TextView
@@ -318,13 +318,13 @@
                 android:id="@+id/rdgb8a"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Prevention methods" />
+                android:text="@string/prevention_methods" />
 
             <RadioButton
                 android:id="@+id/rdgb8b"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Current trends in your country and around the world" />
+                android:text="@string/current_trends_in_your_country_and_around_the_world" />
 
         </RadioGroup>
 
