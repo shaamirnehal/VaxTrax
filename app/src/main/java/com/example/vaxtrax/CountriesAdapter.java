@@ -59,32 +59,26 @@ public class CountriesAdapter extends RecyclerView.Adapter<CountriesAdapter.View
             @Override
             protected FilterResults performFiltering(CharSequence constraint) {
                 String charString = constraint.toString();
-                Log.i("TAG", "performFiltering: " + charString);
                 if (charString.isEmpty()) {
                     filteredData = data;
                 } else {
                     ArrayList<CountriesModel> countriesFilteredData = new ArrayList<>();
                     for (CountriesModel country : data) {
                         if (country.getCountry().toLowerCase().contains(charString.toLowerCase())) {
-                            Log.i("TAG", "performFiltering: result found :)");
                             countriesFilteredData.add(country);
                         }
                     }
                     filteredData = countriesFilteredData;
                 }
-                Log.i("TAG", "FILTERED DATA: " + filteredData.get(0).getCountry());
 
                 FilterResults filterResults = new FilterResults();
                 filterResults.values = filteredData;
-                Log.i("TAG", "FILTER RESULTS: " + filterResults);
                 return filterResults;
             }
 
             @Override
             protected void publishResults(CharSequence constraint, FilterResults results) {
                 filteredData = (ArrayList<CountriesModel>) results.values;
-                Log.i("TAG", "publishResults: " + filteredData);
-                Log.i("TAG", "publishResults: " + filteredData.get(0).getCountry());
                 notifyDataSetChanged();
             }
         };
