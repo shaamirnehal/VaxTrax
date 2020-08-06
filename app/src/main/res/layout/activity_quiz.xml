@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingTop="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="20dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/quiz"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:text="@string/q1_what_country_has_the_most_number_of_active_covid_19_cases_currently_in_the_world"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <RadioGroup
+            android:id="@+id/rdg1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+            <RadioButton
+                android:id="@+id/rdgb1a"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/united_states" />
+
+            <RadioButton
+                android:id="@+id/rdgb1b"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/china" />
+
+            <RadioButton
+                android:id="@+id/rdgb1c"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/brazil" />
+
+            <RadioButton
+                android:id="@+id/rdgb1d"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/russia" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/q2_what_is_the_most_common_symptom_of_covid_19"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rdg1" />
+
+        <RadioGroup
+            android:id="@+id/rdg2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView8">
+
+            <RadioButton
+                android:id="@+id/rdgb2a"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/loss_of_smell_and_taste" />
+
+            <RadioButton
+                android:id="@+id/rdgb2b"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/fever" />
+
+            <RadioButton
+                android:id="@+id/rdgb2c"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/dry_cough" />
+
+            <RadioButton
+                android:id="@+id/rdgb2d"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/depression" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/q3_what_are_the_appropriate_steps_i_should_take_if_i_develop_covid_19_like_symptoms"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rdg2" />
+
+        <RadioGroup
+            android:id="@+id/rdg3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView9">
+
+            <RadioButton
+                android:id="@+id/rdgb3a"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/visit_a_medical_professional" />
+
+            <RadioButton
+                android:id="@+id/rdgb3b"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/self_isolate_for_14_days" />
+
+            <RadioButton
+                android:id="@+id/rdgb3c"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/self_isolate_for_7_days" />
+
+            <RadioButton
+                android:id="@+id/rdgb3d"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/drink_hot_water" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/q4_would_you_rather_know_about_vaccine_developments_in_private_sectors_public_sectors_or_both"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rdg3" />
+
+        <RadioGroup
+            android:id="@+id/rdg4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView10">
+
+            <RadioButton
+                android:id="@+id/rdgb4a"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/private_sector" />
+
+            <RadioButton
+                android:id="@+id/rdgb4b"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/public_sector" />
+
+            <RadioButton
+                android:id="@+id/rdgb4c"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/both" />
+
+            <RadioButton
+                android:id="@+id/rdgb4d"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/none" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/q5_are_you_interested_to_learn_more_about_this_pandemic_that_is_taking_the_world_by_storm"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rdg4" />
+
+        <RadioGroup
+            android:id="@+id/rdg5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView11">
+
+            <RadioButton
+                android:id="@+id/rdgb5a"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/yes" />
+
+            <RadioButton
+                android:id="@+id/rdgb5b"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/no" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/q6_would_you_like_to_know_about_the_vaccine_development_lifecycle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rdg5" />
+
+        <RadioGroup
+            android:id="@+id/rdg6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView12">
+
+            <RadioButton
+                android:id="@+id/rdgb6a"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/yes" />
+
+            <RadioButton
+                android:id="@+id/rdgb6b"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/no" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/q7_do_you_feel_overwhelmed_by_the_current_volume_of_data_being_presented_to_you_in_the_media_about_coronavirus"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rdg6" />
+
+        <RadioGroup
+            android:id="@+id/rdg7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView13">
+
+            <RadioButton
+                android:id="@+id/rdgb7a"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/yes" />
+
+            <RadioButton
+                android:id="@+id/rdgb7b"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/no" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/q8_which_area_of_covid_19_are_you_more_unfamiliar_with"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rdg7" />
+
+        <RadioGroup
+            android:id="@+id/rdg8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView14">
+
+            <RadioButton
+                android:id="@+id/rdgb8a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/prevention_methods" />
+
+            <RadioButton
+                android:id="@+id/rdgb8b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/current_trends_in_your_country_and_around_the_world" />
+
+        </RadioGroup>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</ScrollView>
