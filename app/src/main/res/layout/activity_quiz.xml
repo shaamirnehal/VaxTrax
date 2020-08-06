@@ -3,44 +3,88 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/background2">
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:paddingLeft="20dp"
-        android:paddingTop="20dp"
-        android:paddingRight="20dp"
-        android:paddingBottom="20dp">
+        android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/quiz"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:layout_margin="20dp"
+            android:layout_marginTop="31dp"
+            android:layout_marginRight="31dp">
+
+            <TextView
+                android:id="@+id/VaxTrax"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vax Trax"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/VaxTrax"
+                android:layout_marginTop="6dp"
+                android:text="Information on the COVID-19 Pandemic"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="61dp"
+                android:layout_height="61dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/vaxtrax" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/logo"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:text="COVID-19 Quiz"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            app:cardElevation="6dp"
+            app:cardCornerRadius="12dp"
+            android:layout_margin="12dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
 
         <TextView
             android:id="@+id/textView2"
+            android:textColor="#000000"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="35dp"
-            android:text="@string/q1_what_country_has_the_most_number_of_active_covid_19_cases_currently_in_the_world"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
+            android:layout_marginTop="10dp"
+            android:text="@string/q1_what_country_has_the_most_number_of_active_covid_19_cases_currently_in_the_world"  />
 
         <RadioGroup
             android:id="@+id/rdg1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView2">
+            android:layout_marginTop="5dp" >
 
             <RadioButton
                 android:id="@+id/rdgb1a"
@@ -79,6 +123,7 @@
             android:id="@+id/textView8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="#000000"
             android:layout_marginTop="20dp"
             android:text="@string/q2_what_is_the_most_common_symptom_of_covid_19"
             app:layout_constraintEnd_toEndOf="parent"
@@ -132,6 +177,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:textColor="#000000"
             android:text="@string/q3_what_are_the_appropriate_steps_i_should_take_if_i_develop_covid_19_like_symptoms"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -183,6 +229,7 @@
             android:id="@+id/textView10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="#000000"
             android:layout_marginTop="20dp"
             android:text="@string/q4_would_you_rather_know_about_vaccine_developments_in_private_sectors_public_sectors_or_both"
             app:layout_constraintEnd_toEndOf="parent"
@@ -235,6 +282,7 @@
             android:id="@+id/textView11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="#000000"
             android:layout_marginTop="20dp"
             android:text="@string/q5_are_you_interested_to_learn_more_about_this_pandemic_that_is_taking_the_world_by_storm"
             app:layout_constraintEnd_toEndOf="parent"
@@ -269,6 +317,7 @@
 
         <TextView
             android:id="@+id/textView12"
+            android:textColor="#000000"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -307,6 +356,7 @@
             android:id="@+id/textView13"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="#000000"
             android:layout_marginTop="20dp"
             android:text="@string/q7_do_you_feel_overwhelmed_by_the_current_volume_of_data_being_presented_to_you_in_the_media_about_coronavirus"
             app:layout_constraintEnd_toEndOf="parent"
@@ -343,6 +393,7 @@
             android:id="@+id/textView14"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="#000000"
             android:layout_marginTop="20dp"
             android:text="@string/q8_which_area_of_covid_19_are_you_more_unfamiliar_with"
             app:layout_constraintEnd_toEndOf="parent"
@@ -378,11 +429,19 @@
 
         <Button
             android:id="@+id/btnSubmit"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:background="@drawable/custom_button"
+            android:textColor="#00a2ff"
             android:layout_gravity="center"
+            android:layout_margin="10dp"
             android:text="@string/submit_quiz" />
 
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
     </androidx.appcompat.widget.LinearLayoutCompat>
+
+
 </ScrollView>
