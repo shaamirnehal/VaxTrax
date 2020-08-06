@@ -78,10 +78,10 @@
                         android:id="@+id/vaccineBtn"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/button_background_shape"
                         android:elevation="20dp"
                         android:layout_marginTop="12dp"
                         android:textColor="#000000"
+                        android:background="@drawable/custom_button"
                         android:textSize="18dp"
                         android:text="Vaccine" />
 
@@ -114,9 +114,9 @@
                         android:id="@+id/covidBtn"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/button_background_shape"
                         android:elevation="20dp"
                         android:layout_marginTop="12dp"
+                        android:background="@drawable/custom_button"
                         android:textColor="#000000"
                         android:textSize="18dp"
                         android:text="Virus" />
@@ -151,7 +151,7 @@
                         android:layout_height="wrap_content"
                         android:id="@+id/statsbtn_main"
                         android:layout_marginTop="12dp"
-                        android:background="@drawable/button_background_shape"
+                        android:background="@drawable/custom_button"
                         android:textColor="#000000"
                         android:textSize="18dp"
                         android:text="Statistics" />
@@ -185,7 +185,7 @@
                         android:id="@+id/quizBtn"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/button_background_shape"
+                        android:background="@drawable/custom_button"
                         android:layout_marginTop="12dp"
                         android:textColor="#000000"
                         android:textSize="18dp"
