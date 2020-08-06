@@ -76,7 +76,7 @@
 
                     <Button
                         android:id="@+id/vaccineBtn"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:elevation="20dp"
                         android:layout_marginTop="12dp"
@@ -112,7 +112,7 @@
 
                     <Button
                         android:id="@+id/covidBtn"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:elevation="20dp"
                         android:layout_marginTop="12dp"
@@ -147,10 +147,11 @@
                         android:src="@drawable/statistics"/>
 
                     <Button
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/statsbtn_main"
                         android:layout_marginTop="12dp"
+                        android:elevation="20dp"
                         android:background="@drawable/custom_button"
                         android:textColor="#000000"
                         android:textSize="14dp"
@@ -183,10 +184,11 @@
 
                     <Button
                         android:id="@+id/quizBtn"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@drawable/custom_button"
                         android:layout_marginTop="12dp"
+                        android:elevation="20dp"
                         android:textColor="#000000"
                         android:textSize="14dp"
                         android:text="Quiz" />

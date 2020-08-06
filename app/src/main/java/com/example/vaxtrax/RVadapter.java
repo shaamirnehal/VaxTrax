@@ -33,14 +33,12 @@ public class RVadapter extends RecyclerView.Adapter<RVadapter.ViewHolder> implem
             @Override
             protected FilterResults performFiltering(CharSequence constraint) {
                 String charString = constraint.toString();
-                Log.i("TAG", "performFiltering: " + charString);
                 if (charString.isEmpty()) {
                     filteredData = data;
                 } else {
                     ArrayList<Vaccines> vacFilteredData = new ArrayList<>();
                     for (Vaccines vac : data) {
                         if (vac.getStage().toLowerCase().contains(charString.toLowerCase())) {
-                            Log.i("TAG", "performFiltering: result found :)");
                             vacFilteredData.add(vac);
                         }
                     }
@@ -49,7 +47,6 @@ public class RVadapter extends RecyclerView.Adapter<RVadapter.ViewHolder> implem
 
                 FilterResults filterResults = new FilterResults();
                 filterResults.values = filteredData;
-                Log.i("TAG", "FILTER RESULTS: " + filterResults);
                 return filterResults;
             }
 
