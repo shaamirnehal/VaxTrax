@@ -24,7 +24,7 @@
                 android:id="@+id/VaxTrax"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/vax_trax"
+                android:text="Vax Trax"
                 android:textSize="30sp"
                 android:textColor="#FFFFFF" />
 
@@ -33,7 +33,7 @@
                 android:layout_below="@+id/VaxTrax"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/information_on_the_covid_19_pandemic"
+                android:text="Information on the COVID-19 Pandemic"
                 android:textSize="14sp"
                 android:textColor="#FFFFFF" />
 
@@ -76,14 +76,14 @@
 
                     <Button
                         android:id="@+id/vaccineBtn"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@drawable/button_background_shape"
                         android:elevation="20dp"
                         android:layout_marginTop="12dp"
                         android:textColor="#000000"
                         android:textSize="18dp"
-                        android:text="@string/vaccine" />
+                        android:text="Vaccine" />
 
                 </LinearLayout>
 
@@ -112,14 +112,14 @@
 
                     <Button
                         android:id="@+id/covidBtn"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@drawable/button_background_shape"
                         android:elevation="20dp"
                         android:layout_marginTop="12dp"
                         android:textColor="#000000"
                         android:textSize="18dp"
-                        android:text="@string/virus" />
+                        android:text="Virus" />
 
                 </LinearLayout>
 
@@ -147,14 +147,14 @@
                         android:src="@drawable/statistics"/>
 
                     <Button
-                        android:id="@+id/statsbtn_main"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:id="@+id/statsbtn_main"
                         android:layout_marginTop="12dp"
                         android:background="@drawable/button_background_shape"
-                        android:text="@string/statistics"
                         android:textColor="#000000"
-                        android:textSize="18dp" />
+                        android:textSize="18dp"
+                        android:text="Statistics" />
 
                 </LinearLayout>
 
@@ -183,18 +183,17 @@
 
                     <Button
                         android:id="@+id/quizBtn"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
                         android:background="@drawable/button_background_shape"
-                        android:text="@string/quiz"
+                        android:layout_marginTop="12dp"
                         android:textColor="#000000"
-                        android:textSize="18dp" />
+                        android:textSize="18dp"
+                        android:text="Quiz" />
 
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
-
 
         </GridLayout>
 
