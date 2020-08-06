@@ -31,6 +31,11 @@ public class VaccinesDetail extends AppCompatActivity {
             }
         });
 
+/**
+ * receive intents passed from vaccine page to populate relevant fields based on adapter position
+ */
+
+
         Intent intent = getIntent();
         String name = intent.getStringExtra("name");
         String type = intent.getStringExtra("type");
@@ -43,6 +48,7 @@ public class VaccinesDetail extends AppCompatActivity {
         tv_stage = findViewById(R.id.tv_stage);
         tv_info = findViewById(R.id.tv_info);
 
+//      populate textviews
 
         tv_name.setText(vac.getName());
         tv_type.setText(vac.getType());

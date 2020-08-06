@@ -1,16 +1,8 @@
 <resources>
     <string name="app_name">VaxTrax</string>
-    <string name="vaxTraxLogo">VaxTrax Logo</string>
-    <string name="syringeLogo">SyringeLogo</string>
-    <string name="vaccineBtn">Vaccine</string>
-    <string name="vaccines">Vaccines</string>
-    <string name="covidBtn">Covid-19</string>
     <string name="stage">Stage:</string>
     <string name="type">Type:</string>
     <string name="name">Name:</string>
-    <string name="quizBtn">Take Covid Quiz</string>
-    <string name="statsBtn">Latest Stats</string>
-    <string name="guidelines">Guidelines</string>
     <string name="covidInfo">COVID-19 is a respiratory illness caused by a new virus.
         Symptoms include fever, coughing, a sore throat and shortness of breath. The virus can spread
         from person to person. Currently there is no treatment for COVID-19. It was first reported in
@@ -28,20 +20,9 @@
         \n\u25E6 Avoid areas that may be crowded such as a public park &#160;&#160;or shopping centre.
         \n\u25E6 Keep a 2.5m (6 feet) distance from other people when &#160;&#160;outside.
         \n\u25E6 Use sanitiser after touching door handles or other &#160;&#160;&#160;frequently touched objects.</string>
-    <string name="copyRight">Copyright &#169; 2020 Vax Trax</string>
-    <string name="global_stats">Global Stats</string>
-    <string name="new_confirmed">New Confirmed:</string>
-    <string name="total_confirmed">Total Confirmed:</string>
-    <string name="new_deaths">New Deaths:</string>
-    <string name="total_deaths">Total Deaths:</string>
-    <string name="total_recovered">Total Recovered:</string>
-    <string name="new_recovered">New Recovered:</string>
-    <string name="country">Country:</string>
-    <string name="description">Description</string>
     <string name="view_covid_19_statistics">View COVID-19 Statistics</string>
     <string name="vaccine_development">Vaccine Development</string>
     <string name="information_on_the_covid_19_pandemic">Information on the COVID-19 Pandemic</string>
-    <string name="stages_of_vaccine_development">Stages of Vaccine Development</string>
     <string name="preclinical">Preclinical:</string>
     <string name="phase_1">Phase 1:</string>
     <string name="phase_2">Phase 2:</string>
@@ -62,11 +43,6 @@
     <string name="q3_what_are_the_appropriate_steps_i_should_take_if_i_develop_covid_19_like_symptoms">Q3: What are the appropriate steps I should take if I develop COVID-19 like symptoms?</string>
     <string name="q2_what_is_the_most_common_symptom_of_covid_19">Q2: What is the most common symptom of COVID-19?</string>
     <string name="q1_what_country_has_the_most_number_of_active_covid_19_cases_currently_in_the_world">Q1: What country has the most number of active COVID-19 cases currently in the world?</string>
-    <string name="vax_trax">Vax Trax</string>
-    <string name="vaccine">Vaccine</string>
-    <string name="virus">Virus</string>
-    <string name="statistics">Statistics</string>
-    <string name="quiz">Quiz</string>
     <string name="current_trends_in_your_country_and_around_the_world">Current trends in your country and around the world</string>
     <string name="prevention_methods">Prevention methods</string>
     <string name="no">No</string>
@@ -88,6 +64,5 @@
     <string name="china">China</string>
     <string name="united_states">United States</string>
     <string name="submit_quiz">Submit Quiz</string>
-    <string name="search_hint">search</string>
     <string name="loading">Loading</string>
 </resources>

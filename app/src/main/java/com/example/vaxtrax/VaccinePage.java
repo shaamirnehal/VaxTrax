@@ -38,7 +38,8 @@ public class VaccinePage extends AppCompatActivity implements RVadapter.ItemClic
     RVadapter adapter;
     ArrayList<Vaccines> data = new ArrayList<>();
     RequestQueue reqQ;
-    String baseUrl = "http://10.0.2.2:8080"; //android emulator maps local host ip to 10.0.2.2
+    //android emulator maps local host ip to 10.0.2.2 and server is hosted locally for this project
+    String baseUrl = "http://10.0.2.2:8080";
     String listVac = "/vaccine";
     ArrayList<Vaccines> vList;
     ImageButton help;
@@ -62,6 +63,7 @@ public class VaccinePage extends AppCompatActivity implements RVadapter.ItemClic
         pref = getApplicationContext().getSharedPreferences("MyPref", 0); // 0 - for private mode
         editor = pref.edit();
 
+        // onclick listener for help page
         help = findViewById(R.id.ib_help);
         help.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,13 +79,14 @@ public class VaccinePage extends AppCompatActivity implements RVadapter.ItemClic
         rv.setLayoutManager(new LinearLayoutManager(this));
         rv.setAdapter(adapter);
 
+        // search manager for searchview
         SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
         sv = findViewById(R.id.sv_vac);
 //        assert searchManager != null;
         sv.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
         sv.setMaxWidth(Integer.MAX_VALUE);
 
-
+        // search view query listener
         sv.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
@@ -105,6 +108,10 @@ public class VaccinePage extends AppCompatActivity implements RVadapter.ItemClic
 
     }
 
+
+    /**
+     * get data from API
+     */
     private void fetchVac() {
         alertDialog.show();
         StringRequest req = new StringRequest(Request.Method.GET, baseUrl + listVac,
@@ -129,6 +136,10 @@ public class VaccinePage extends AppCompatActivity implements RVadapter.ItemClic
         reqQ.add(req);
     }
 
+    /**
+     * populates recyclerview cards with vaccines
+     * @param response list of vaccines
+     */
     private void populateRV(String response) {
         try {
             JSONArray vaccinesArray = new JSONArray(response);
@@ -150,6 +161,7 @@ public class VaccinePage extends AppCompatActivity implements RVadapter.ItemClic
 
     @Override
     public void onItemClick(View view, int position) {
+        // pass extras to vaccine details page to populate based on adapter position
         Intent intent = new Intent(this, VaccinesDetail.class);
         intent.putExtra("name", vList.get(position).getName());
         intent.putExtra("type", vList.get(position).getType());
@@ -158,7 +170,9 @@ public class VaccinePage extends AppCompatActivity implements RVadapter.ItemClic
         startActivity(intent);
     }
 
-    // get data from shared pref
+    /**
+     * get data from shared pref and toasts to display
+     */
     private void getSharedPref() {
         Toast.makeText(VaccinePage.this, "Internet connectivity not found, showing last saved results", Toast.LENGTH_LONG).show();
         String list = pref.getString("VacsData", null);
@@ -169,6 +183,11 @@ public class VaccinePage extends AppCompatActivity implements RVadapter.ItemClic
         }
     }
 
+
+    /**
+     * checks for internet connection
+     * @return true if internet available; false otherwise
+     */
     private boolean isNetworkAvailable() {
         ConnectivityManager connectivityManager
                 = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);

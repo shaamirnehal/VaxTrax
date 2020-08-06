@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -26,6 +27,11 @@ public class RVadapter extends RecyclerView.Adapter<RVadapter.ViewHolder> implem
     void setClickListener (ItemClickListener itemClickListener) {
         this.mClickListener = itemClickListener;
     }
+
+    /**
+     * implement filterable methods for search view
+     * performfiltering takes in query and checks against data
+      */
 
     @Override
     public Filter getFilter() {
@@ -54,6 +60,7 @@ public class RVadapter extends RecyclerView.Adapter<RVadapter.ViewHolder> implem
             protected void publishResults(CharSequence constraint, FilterResults results) {
                 filteredData = (ArrayList<Vaccines>) results.values;
                 notifyDataSetChanged();
+                // notify adapter of data set change and store in filtered data
             }
         };
     }
@@ -106,8 +113,18 @@ public class RVadapter extends RecyclerView.Adapter<RVadapter.ViewHolder> implem
 
         @Override
         public void onClick(View v) {
-            if (mClickListener != null)
-                mClickListener.onItemClick(v, getAdapterPosition());
+            if (mClickListener != null) {
+                String name = filteredData.get(getAdapterPosition()).getName();
+                int position = -1;
+                for (int i = 0; i < data.size(); i++) {
+                    if (data.get(i).getName().equalsIgnoreCase(name)) {
+                        position = i;
+                        break;
+                    }
+                }
+//                if (position == -1) Toast.makeText(context, "", Toast.LENGTH_SHORT).show();
+                mClickListener.onItemClick(v, position);
+            }
         }
     }
 }

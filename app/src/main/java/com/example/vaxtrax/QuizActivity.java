@@ -17,8 +17,6 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonArrayRequest;
-import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
@@ -34,7 +32,7 @@ public class QuizActivity extends AppCompatActivity {
 
     Button submit;
     RequestQueue reqQ;
-    String baseUrl = "http://10.0.2.2:8080";
+    String baseUrl = "http://10.0.2.2:8080"; // android emulator maps local host to 10.0.2.2
     String quizOne = "/quizOne";
     String quizTwo = "/quizTwo";
     ArrayList<AnsOneModel> ansOneList = new ArrayList<>();
@@ -61,6 +59,7 @@ public class QuizActivity extends AppCompatActivity {
 
         reqQ = Volley.newRequestQueue(this);
 
+        // populating answer lists with default params
         for (int i = 1; i < 5; i++) {
             AnsOneModel ansOne = new AnsOneModel(i, false, false, false, false);
             AnsTwoModel ansTwo = new AnsTwoModel(i, false, false);
@@ -68,6 +67,10 @@ public class QuizActivity extends AppCompatActivity {
             ansTwoList.add(ansTwo);
         }
 
+        /**
+         * if internet is available and all questions answered, put data into json obj
+         * call post answer method to POST data to API endpoint
+         */
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -109,6 +112,10 @@ public class QuizActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * check is all questions have been answered
+      */
+
     private boolean allAnswered() {
         boolean listOne = true;
         boolean listTwo = true;
@@ -127,11 +134,19 @@ public class QuizActivity extends AppCompatActivity {
         return listOne && listTwo;
     }
 
+    /**
+     * exit activity when quiz is submitted
+      */
+
     @Override
     public void onBackPressed() {
         super.onBackPressed();
         finish();
     }
+
+    /**
+     * POST quiz one answers to API endpoint, calls method for posting quiz two answers within
+      */
 
     public void postAnsOne() {
         StringRequest req = new StringRequest(Request.Method.PUT, baseUrl + quizOne,
@@ -140,7 +155,7 @@ public class QuizActivity extends AppCompatActivity {
                     public void onResponse(String response) {
                         Log.i("TAG", "onResponse: " + response);
                         reqOneResolved = true;
-                        postAnsTwo();
+                        postAnsTwo(); // post quiz two answers within this method
 
                     }
                 }, new Response.ErrorListener() {
@@ -160,6 +175,10 @@ public class QuizActivity extends AppCompatActivity {
         };
         reqQ.add(req);
     }
+
+    /**
+     * POST quiz two answers to API endpoint
+      */
 
     public void postAnsTwo() {
         StringRequest req = new StringRequest(Request.Method.PUT, baseUrl + quizTwo,
@@ -192,6 +211,10 @@ public class QuizActivity extends AppCompatActivity {
         };
         reqQ.add(req);
     }
+
+    /**
+     * handle response on radio buttons and store as boolean
+      */
 
     public void handleSelection(int questionId, String selection, boolean isMult) {
         if (isMult) {
@@ -237,6 +260,10 @@ public class QuizActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * check for internet
+      */
+
     private boolean isNetworkAvailable() {
         ConnectivityManager connectivityManager
                 = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -244,6 +271,11 @@ public class QuizActivity extends AppCompatActivity {
         return activeNetworkInfo != null && activeNetworkInfo.isConnected();
     }
 
+
+    /**
+     * gets response of clicked radio button and passes for storage
+     * @param view radio button id
+     */
     public void onRadioButtonClicked(View view) {
         // Is the button now checked?
         boolean checked = ((RadioButton) view).isChecked();

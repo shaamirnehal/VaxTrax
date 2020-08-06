@@ -3,6 +3,8 @@ package com.example.vaxtrax;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 
+//  model for vaccines
+
 public class Vaccines {
 
     private String name;

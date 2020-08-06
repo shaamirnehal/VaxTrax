@@ -41,6 +41,7 @@ public class StatsCovid extends AppCompatActivity {
     RecyclerView rv;
     CountriesAdapter adapter;
     ArrayList<CountriesModel> cList;
+    // declare request queue and add API url pathway
     RequestQueue reqQ;
     String url = "https://api.covid19api.com/summary";
     // create pref variables
@@ -76,12 +77,15 @@ public class StatsCovid extends AppCompatActivity {
         rv.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
         rv.setAdapter(adapter);
 
+
+        // declare search manager for search view
         SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
         sv_stats = findViewById(R.id.sv_stats);
 //        assert searchManager != null;
         sv_stats.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
         sv_stats.setMaxWidth(Integer.MAX_VALUE);
 
+        // set on query listener for search view
         sv_stats.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
@@ -102,12 +106,14 @@ public class StatsCovid extends AppCompatActivity {
         else getSharedPref();
     }
 
+
+    // method for getting API response
     public void fetchStats() {
         alertDialog.show();
         StringRequest req = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                Log.i("TAG", "onResponse: " + response);
+//                Log.i("TAG", "onResponse: " + response);
                 // save response to sharedPref
                 editor.putString("StatsData", response);
                 editor.commit();
@@ -117,7 +123,7 @@ public class StatsCovid extends AppCompatActivity {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Log.i("TAG", "onErrorResponse: " + error.getMessage());
+//                Log.i("TAG", "onErrorResponse: " + error.getMessage());
                 alertDialog.dismiss();
             }
         });
@@ -134,6 +140,9 @@ public class StatsCovid extends AppCompatActivity {
             populateRV(list);
         }
     }
+
+    /* method that populates cards on recyclerview. There are two objects here. One for getting
+    global stats and the other for country wise stats*/
 
     private void populateRV(String response) {
         try {
@@ -178,6 +187,7 @@ public class StatsCovid extends AppCompatActivity {
         if (alertDialog.isShowing()) alertDialog.dismiss();
     }
 
+    // method to check internet connectivity
     private boolean isNetworkAvailable() {
         ConnectivityManager connectivityManager
                 = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);

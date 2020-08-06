@@ -25,6 +25,9 @@ public class MainActivity extends AppCompatActivity {
         statsbtn_main = findViewById(R.id.statsbtn_main);
         quizBtn = findViewById(R.id.quizBtn);
 
+//      attaching buttons to their xml counterparts
+//      setting on click listeners and passing intents for pages
+
         covidBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

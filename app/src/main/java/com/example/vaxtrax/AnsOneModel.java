@@ -1,5 +1,9 @@
 package com.example.vaxtrax;
 
+
+//  model for answers for quiz one. Quiz one has four options to questions.
+
+
 public class AnsOneModel {
 
     private int questionId;

@@ -1,5 +1,7 @@
 package com.example.vaxtrax;
 
+// model for country stats uses model for global stats
+
 public class CountriesModel {
     String country;
     StatsModel statsModel;

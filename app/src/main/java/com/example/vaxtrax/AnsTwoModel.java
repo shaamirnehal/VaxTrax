@@ -1,5 +1,9 @@
 package com.example.vaxtrax;
 
+
+//  model for answers for quiz two. Quiz two includes questions that have two options each
+
+
 public class AnsTwoModel {
 
     private int questionId;

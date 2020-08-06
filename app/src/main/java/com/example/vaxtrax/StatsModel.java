@@ -2,6 +2,8 @@ package com.example.vaxtrax;
 
 import com.google.gson.annotations.SerializedName;
 
+// model for global stats
+
 public class StatsModel {
     public int getNewConfirmed() {
         return newConfirmed;

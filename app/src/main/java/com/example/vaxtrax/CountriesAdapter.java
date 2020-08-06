@@ -1,7 +1,6 @@
 package com.example.vaxtrax;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,7 +9,6 @@ import android.widget.Filterable;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
@@ -22,6 +20,11 @@ public class CountriesAdapter extends RecyclerView.Adapter<CountriesAdapter.View
     private LayoutInflater inflater;
     private Context context;
 
+    /**
+     * constructor
+     * @param data list of countries to be rendered on recycler view
+     * @param context parent activity context
+     */
     public CountriesAdapter(ArrayList<CountriesModel> data, Context context) {
         this.data = data;
         this.filteredData = data;
@@ -53,6 +56,11 @@ public class CountriesAdapter extends RecyclerView.Adapter<CountriesAdapter.View
         return filteredData.size();
     }
 
+    /**
+     * implements filterable functions for search view
+     * performfiltering get query to check against data
+     */
+
     @Override
     public Filter getFilter() {
         return new Filter() {
@@ -64,6 +72,7 @@ public class CountriesAdapter extends RecyclerView.Adapter<CountriesAdapter.View
                 } else {
                     ArrayList<CountriesModel> countriesFilteredData = new ArrayList<>();
                     for (CountriesModel country : data) {
+                        // make sure cases are not an issue and chars are compared not strings
                         if (country.getCountry().toLowerCase().contains(charString.toLowerCase())) {
                             countriesFilteredData.add(country);
                         }
@@ -80,6 +89,7 @@ public class CountriesAdapter extends RecyclerView.Adapter<CountriesAdapter.View
             protected void publishResults(CharSequence constraint, FilterResults results) {
                 filteredData = (ArrayList<CountriesModel>) results.values;
                 notifyDataSetChanged();
+                // notify adapter of data set change
             }
         };
     }

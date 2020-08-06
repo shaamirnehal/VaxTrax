@@ -16,6 +16,8 @@ public class CovidPage extends AppCompatActivity {
         setContentView(R.layout.activity_covid_page);
         statsBtn = findViewById(R.id.statsBtn);
 
+//      onclick listener for viewing stats
+
         statsBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

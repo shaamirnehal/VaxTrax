@@ -24,7 +24,6 @@
             android:textSize="30sp" />
 
         <TextView
-            android:id="@+id/subtitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/VaxTrax"
@@ -96,7 +95,6 @@
     <TextView
         android:textColor="#000000"
         android:textStyle="bold"
-        android:id="@+id/type_display"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="left"
@@ -113,7 +111,6 @@
 
     <TextView
         android:textColor="#000000"
-        android:id="@+id/stage_display"
         android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -133,7 +130,6 @@
 
     <TextView
         android:textColor="#000000"
-        android:id="@+id/info_display"
         android:layout_width="wrap_content"
         android:textStyle="bold"
         android:layout_height="wrap_content"
