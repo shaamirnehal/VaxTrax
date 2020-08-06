@@ -115,6 +115,7 @@ public class StatsCovid extends AppCompatActivity {
 
     // get data from shared pref
     private void getSharedPref() {
+        Toast.makeText(StatsCovid.this, "Internet connectivity not found, showing last saved results", Toast.LENGTH_LONG).show();
         String list = pref.getString("StatsData", null);
         if (list == null) {
             Toast.makeText(getApplicationContext(), "Internet connectivity not found", Toast.LENGTH_LONG).show();

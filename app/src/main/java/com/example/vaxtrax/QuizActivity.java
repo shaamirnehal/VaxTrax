@@ -2,11 +2,15 @@ package com.example.vaxtrax;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -36,6 +40,8 @@ public class QuizActivity extends AppCompatActivity {
     String stringArrOne;
     ArrayList<AnsTwoModel> ansTwoList = new ArrayList<>();
     String stringArrTwo;
+    boolean reqOneResolved = false;
+    boolean reqTwoResolved = false;
 
 
     @Override
@@ -54,38 +60,68 @@ public class QuizActivity extends AppCompatActivity {
             ansTwoList.add(ansTwo);
         }
 
-
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                try {
-                    JSONArray arrOne = new JSONArray();
-                    JSONArray arrTwo = new JSONArray();
-                    for (AnsOneModel obj : ansOneList) {
-                        JSONObject o = new JSONObject();
-                        o.put("questionId", obj.getQuestionId());
-                        o.put("optionOne", obj.isOptionOne());
-                        o.put("optionTwo", obj.isOptionTwo());
-                        o.put("optionThree", obj.isOptionThree());
-                        o.put("optionFour", obj.isOptionFour());
-                        arrOne.put(o);
+                if (isNetworkAvailable()) {
+                    if (allAnswered()) {
+                        try {
+                            JSONArray arrOne = new JSONArray();
+                            JSONArray arrTwo = new JSONArray();
+                            for (AnsOneModel obj : ansOneList) {
+                                JSONObject o = new JSONObject();
+                                o.put("questionId", obj.getQuestionId());
+                                o.put("optionOne", obj.isOptionOne());
+                                o.put("optionTwo", obj.isOptionTwo());
+                                o.put("optionThree", obj.isOptionThree());
+                                o.put("optionFour", obj.isOptionFour());
+                                arrOne.put(o);
+                            }
+                            for (AnsTwoModel obj : ansTwoList) {
+                                JSONObject o = new JSONObject();
+                                o.put("questionId", obj.getQuestionId());
+                                o.put("optionOne", obj.isOptionOne());
+                                o.put("optionTwo", obj.isOptionTwo());
+                                arrTwo.put(o);
+                            }
+                            stringArrOne = arrOne.toString();
+                            stringArrTwo = arrTwo.toString();
+                            postAnsOne();
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    } else {
+                        Toast.makeText(QuizActivity.this, "Please answer all questions", Toast.LENGTH_SHORT).show();
                     }
-                    for (AnsTwoModel obj : ansTwoList) {
-                        JSONObject o = new JSONObject();
-                        o.put("questionId", obj.getQuestionId());
-                        o.put("optionOne", obj.isOptionOne());
-                        o.put("optionTwo", obj.isOptionTwo());
-                        arrTwo.put(o);
-                    }
-                    stringArrOne = arrOne.toString();
-                    stringArrTwo = arrTwo.toString();
-                    postAnsOne();
-                    postAnsTwo();
-                } catch (JSONException e) {
-                    e.printStackTrace();
+                } else {
+                    Toast.makeText(QuizActivity.this, "No internet connectivity found", Toast.LENGTH_SHORT).show();
                 }
             }
         });
+    }
+
+    private boolean allAnswered() {
+        boolean listOne = true;
+        boolean listTwo = true;
+        for (AnsOneModel obj : ansOneList) {
+            if (!obj.isOptionOne() && !obj.isOptionTwo() && !obj.isOptionThree() && !obj.isOptionFour()) {
+                listOne = false;
+                break;
+            }
+        }
+        for (AnsTwoModel obj : ansTwoList) {
+            if (!obj.isOptionOne() && !obj.isOptionTwo()) {
+                listTwo = false;
+                break;
+            }
+        }
+        return listOne && listTwo;
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
     }
 
     public void postAnsOne() {
@@ -94,6 +130,8 @@ public class QuizActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(String response) {
                         Log.i("TAG", "onResponse: " + response);
+                        reqOneResolved = true;
+                        postAnsTwo();
 
                     }
                 }, new Response.ErrorListener() {
@@ -119,6 +157,11 @@ public class QuizActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(String response) {
                         Log.i("TAG", "onResponse: " + response);
+                        reqTwoResolved = true;
+                        if (reqOneResolved && reqTwoResolved) {
+                            Toast.makeText(QuizActivity.this, "Quiz Submitted", Toast.LENGTH_SHORT).show();
+                            onBackPressed();
+                        }
 
                     }
                 }, new Response.ErrorListener() {
@@ -180,6 +223,13 @@ public class QuizActivity extends AppCompatActivity {
                 }
             }
         }
+    }
+
+    private boolean isNetworkAvailable() {
+        ConnectivityManager connectivityManager
+                = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
     }
 
     public void onRadioButtonClicked(View view) {
