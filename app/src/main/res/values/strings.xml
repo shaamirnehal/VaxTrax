@@ -88,4 +88,5 @@
     <string name="china">China</string>
     <string name="united_states">United States</string>
     <string name="submit_quiz">Submit Quiz</string>
+    <string name="search_hint">search</string>
 </resources>
