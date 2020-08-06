@@ -67,6 +67,14 @@
 
         </RelativeLayout>
 
+    <SearchView
+        android:id="@+id/sv_vac"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_background_shape"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"/>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv"
         android:layout_width="match_parent"

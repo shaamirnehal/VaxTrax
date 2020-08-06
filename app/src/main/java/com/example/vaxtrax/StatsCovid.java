@@ -11,6 +11,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
+import android.app.AlertDialog;
 import android.app.SearchManager;
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -45,6 +46,9 @@ public class StatsCovid extends AppCompatActivity {
     // create pref variables
     SharedPreferences pref;
     SharedPreferences.Editor editor;
+    AlertDialog.Builder builder;
+    AlertDialog alertDialog;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +58,11 @@ public class StatsCovid extends AppCompatActivity {
         // instantiate pref vars
         pref = getApplicationContext().getSharedPreferences("MyPref", 0); // 0 - for private mode
         editor = pref.edit();
+
+        builder = new AlertDialog.Builder(this);
+        builder.setCancelable(false);
+        builder.setView(R.layout.layout_loading_dialog);
+        alertDialog = builder.create();
 
         tvTC = findViewById(R.id.tv_tc);
         tvNC = findViewById(R.id.tv_nc);
@@ -94,6 +103,7 @@ public class StatsCovid extends AppCompatActivity {
     }
 
     public void fetchStats() {
+        alertDialog.show();
         StringRequest req = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -108,6 +118,7 @@ public class StatsCovid extends AppCompatActivity {
             @Override
             public void onErrorResponse(VolleyError error) {
                 Log.i("TAG", "onErrorResponse: " + error.getMessage());
+                alertDialog.dismiss();
             }
         });
         reqQ.add(req);
@@ -164,6 +175,7 @@ public class StatsCovid extends AppCompatActivity {
         } catch (JSONException err) {
             err.printStackTrace();
         }
+        if (alertDialog.isShowing()) alertDialog.dismiss();
     }
 
     private boolean isNetworkAvailable() {
