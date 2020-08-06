@@ -29,42 +29,6 @@ public class CountriesAdapter extends RecyclerView.Adapter<CountriesAdapter.View
         this.inflater = LayoutInflater.from(context);
     }
 
-//    public void setCountriesList (Context context, final ArrayList<CountriesModel> data) {
-//        this.context = context;
-//        if (this.data == null) {
-//            this.data = data;
-//            this.filteredData = data;
-//            notifyItemChanged(0, filteredData.size());
-//        } else {
-//            final DiffUtil.DiffResult result = DiffUtil.calculateDiff(new DiffUtil.Callback() {
-//                @Override
-//                public int getOldListSize() {
-//                    return CountriesAdapter.this.data.size();
-//                }
-//
-//                @Override
-//                public int getNewListSize() {
-//                    return data.size();
-//                }
-//
-//                @Override
-//                public boolean areItemsTheSame(int oldItemPosition, int newItemPosition) {
-//                    return CountriesAdapter.this.data.get(oldItemPosition).getCountry() == data.get(newItemPosition).getCountry();
-//                }
-//
-//                @Override
-//                public boolean areContentsTheSame(int oldItemPosition, int newItemPosition) {
-//                    CountriesModel newCountries = CountriesAdapter.this.data.get(oldItemPosition);
-//                    CountriesModel oldCountries = data.get(newItemPosition);
-//                    return newCountries.getCountry() == oldCountries.getCountry();
-//                }
-//            });
-//            this.data = data;
-//            this.filteredData = data;
-//            result.dispatchUpdatesTo(this);
-//        }
-//    }
-
     @NonNull
     @Override
     public CountriesAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {

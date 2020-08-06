@@ -2,6 +2,7 @@ package com.example.vaxtrax;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -42,6 +43,8 @@ public class QuizActivity extends AppCompatActivity {
     String stringArrTwo;
     boolean reqOneResolved = false;
     boolean reqTwoResolved = false;
+    AlertDialog.Builder builder;
+    AlertDialog alertDialog;
 
 
     @Override
@@ -50,6 +53,11 @@ public class QuizActivity extends AppCompatActivity {
         setContentView(R.layout.activity_quiz);
 
         submit = findViewById(R.id.btnSubmit);
+
+        builder = new AlertDialog.Builder(this);
+        builder.setCancelable(false);
+        builder.setView(R.layout.layout_loading_dialog);
+        alertDialog = builder.create();
 
         reqQ = Volley.newRequestQueue(this);
 
@@ -65,6 +73,7 @@ public class QuizActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (isNetworkAvailable()) {
                     if (allAnswered()) {
+                        alertDialog.show();
                         try {
                             JSONArray arrOne = new JSONArray();
                             JSONArray arrTwo = new JSONArray();
@@ -138,6 +147,7 @@ public class QuizActivity extends AppCompatActivity {
             @Override
             public void onErrorResponse(VolleyError error) {
                 Log.i("TAG", "onErrorResponse: " + error.getMessage());
+                if (alertDialog.isShowing()) alertDialog.dismiss();
             }
         }) {
             @Override
@@ -159,6 +169,7 @@ public class QuizActivity extends AppCompatActivity {
                         Log.i("TAG", "onResponse: " + response);
                         reqTwoResolved = true;
                         if (reqOneResolved && reqTwoResolved) {
+                            if (alertDialog.isShowing()) alertDialog.dismiss();
                             Toast.makeText(QuizActivity.this, "Quiz Submitted", Toast.LENGTH_SHORT).show();
                             onBackPressed();
                         }
@@ -168,6 +179,7 @@ public class QuizActivity extends AppCompatActivity {
             @Override
             public void onErrorResponse(VolleyError error) {
                 Log.i("TAG", "onErrorResponse: " + error.getMessage());
+                if (alertDialog.isShowing()) alertDialog.dismiss();
             }
         }) {
             @Override
