@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -13,11 +15,21 @@ public class VaccinesDetail extends AppCompatActivity {
     TextView tv_type;
     TextView tv_stage;
     TextView tv_info;
+    ImageButton ib_help;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vaccines_detail);
+
+        ib_help = findViewById(R.id.ib_help);
+        ib_help.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(VaccinesDetail.this, HelpActivity.class);
+                startActivity(intent);
+            }
+        });
 
         Intent intent = getIntent();
         String name = intent.getStringExtra("name");
